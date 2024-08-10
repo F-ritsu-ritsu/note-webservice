@@ -1,0 +1,29 @@
+<!-- views/note-index.ejs -->
+<!-- 表示するhtml -->
+<!DOCTYPE html>
+<html lang="ja">
+
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= note_title %></title>
+</head>
+
+<body>
+<h1>note</h1>
+<h2>ノート番号:<%= note_id %></h2>
+<h2>ノート名</h2>
+<input type="text" size="50" value='<%= note_title %>' class="note-title">  
+
+<p>ノートを入力<br>
+<textarea name="note-area" cols="100" rows="10" class="note-content">
+<%= note_content %></textarea></p>
+<button class="send-note-button">更新</button>
+<script src="/static/note-index.js" defer></script>
+<br>
+<br>
+<a href="http://localhost:3100/">一覧に戻る</a>
+</body>
+
+</html>
